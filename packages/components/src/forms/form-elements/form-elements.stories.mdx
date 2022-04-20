@@ -1,0 +1,446 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+
+import Input from "./input";
+import Textarea from "./textarea";
+import Checkbox from "./checkbox";
+import Radio from "./radio";
+import FileBrowser from "./file-browser";
+import Select from "./select";
+
+<Meta title="Forms/Form Elements" />
+
+# Form Elements
+
+<p className="sbdocs-desc">
+    Examples and usage guidelines for form control styles, layout options, and
+    custom components for creating a wide variety of forms.
+</p>
+
+## Basic From Input
+
+A basic form control with disabled and readonly mode.
+
+<Preview withToolbar>
+    <Story name="Basic From Input">
+        <div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Input placeholder="Input Box" />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Input placeholder="Input Box (readonly)" readonly />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Input placeholder="Input Box (Disabled)" disabled />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Textarea placeholder="Textarea" />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Textarea placeholder="Textarea (readonly)" readonly />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Textarea placeholder="Textarea (Disabled)" disabled />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Valid State Input
+
+A form control with success, warning and error state.
+
+<Preview withToolbar>
+    <Story name="Valid State Input">
+        <div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Input
+                        placeholder="Input Box (Success State)"
+                        showErrorOnly={false}
+                        state="success"
+                        feedbackText="Looks good!"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Input
+                        placeholder="Input Box (Warning State)"
+                        showErrorOnly={false}
+                        state="warning"
+                        feedbackText="This is required"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Input
+                        placeholder="Input Box (Error State)"
+                        state="error"
+                        feedbackText="This is required"
+                    />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Textarea
+                        placeholder="Textarea (Success State)"
+                        showErrorOnly={false}
+                        state="success"
+                        feedbackText="Looks good!"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Textarea
+                        placeholder="Textarea (Warning State)"
+                        showErrorOnly={false}
+                        state="warning"
+                        feedbackText="This is required"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Textarea
+                        placeholder="Textarea (Error State)"
+                        state="error"
+                        feedbackText="This is required"
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Custom Checkboxes & Radios
+
+A custom styled checkboxes and radios.
+
+<Preview withToolbar>
+    <Story name="Custom Checkboxes & Radios">
+        <div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Checkbox
+                        id="checkbox1"
+                        name="checkbox1"
+                        label="Checkbox Unchecked"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Checkbox
+                        id="checkbox2"
+                        name="checkbox2"
+                        label="Checkbox Checked"
+                        defaultChecked
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Checkbox
+                        id="checkbox3"
+                        name="checkbox3"
+                        label="Checkbox Disabled"
+                        disabled
+                    />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Radio
+                        id="radio1"
+                        name="customRadio"
+                        label="Radio Unchecked"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Radio
+                        id="radio1"
+                        name="customRadio"
+                        label="Radio Checked"
+                        defaultChecked
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Radio
+                        id="radio1"
+                        name="customRadio"
+                        label="Radio Disabled"
+                        disabled
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Active State Color Variant
+
+A custom styled checkboxes and radios with colored active state.
+
+<Preview withToolbar>
+    <Story name="Active State Color Variant">
+        <div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Checkbox
+                        id="checkbox4"
+                        name="checkbox4"
+                        label="Checkbox Primary (default)"
+                        defaultChecked
+                        color="primary"
+                        className="mg-t-10"
+                    />
+                    <Checkbox
+                        id="checkbox5"
+                        name="checkbox5"
+                        label="Checkbox Success"
+                        defaultChecked
+                        color="success"
+                        className="mg-t-10"
+                    />
+                    <Checkbox
+                        id="checkbox5"
+                        name="checkbox5"
+                        label="Checkbox Indigo"
+                        defaultChecked
+                        color="indigo"
+                        className="mg-t-10"
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Radio
+                        id="radio4"
+                        name="radio2"
+                        label="Radio Primary (default)"
+                        defaultChecked
+                        color="primary"
+                        className="mg-t-10"
+                    />
+                    <Radio
+                        id="radio5"
+                        name="radio3"
+                        label="Radio Success"
+                        defaultChecked
+                        color="success"
+                        className="mg-t-10"
+                    />
+                    <Radio
+                        id="radio5"
+                        name="radio4"
+                        label="Radio Indigo"
+                        defaultChecked
+                        color="indigo"
+                        className="mg-t-10"
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## File Browser
+
+A custom styled file browser.
+
+<Preview withToolbar>
+    <Story name="File Browser">
+        <div className="row">
+            <div className="col-lg mg-t-10">
+                <FileBrowser
+                    id="customFile"
+                    name="customFile"
+                    label="Choose File"
+                />
+            </div>
+            <div className="col-lg mg-t-10">
+                <FileBrowser
+                    id="customFile"
+                    name="customFile"
+                    label="Choose File"
+                    color="primary"
+                />
+            </div>
+            <div className="col-lg mg-t-10">
+                <FileBrowser
+                    id="customFile"
+                    name="customFile"
+                    label="Choose File"
+                    color="inverse"
+                />
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Select
+
+React-Select is a flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.
+
+<Preview withToolbar>
+    <Story name="Select">
+        <div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Select
+                        name="basic-select"
+                        options={[
+                            { value: "chocolate", label: "Chocolate" },
+                            { value: "strawberry", label: "Strawberry" },
+                            { value: "vanilla", label: "Vanilla" },
+                        ]}
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Select
+                        name="clearable-select"
+                        options={[
+                            { value: "chocolate", label: "Chocolate" },
+                            { value: "strawberry", label: "Strawberry" },
+                            { value: "vanilla", label: "Vanilla" },
+                        ]}
+                        isClearable
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Select
+                        name="disabled-select-2"
+                        options={[
+                            { value: "chocolate", label: "Chocolate" },
+                            { value: "strawberry", label: "Strawberry" },
+                            { value: "vanilla", label: "Vanilla" },
+                        ]}
+                        isDisabled
+                    />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-lg mg-t-10">
+                    <Select
+                        placeholder="Choose one (with optgroup)"
+                        name="group-select"
+                        options={[
+                            {
+                                label: "Colours",
+                                options: [
+                                    {
+                                        value: "ocean",
+                                        label: "Ocean",
+                                        color: "#00B8D9",
+                                        isFixed: true,
+                                    },
+                                    {
+                                        value: "blue",
+                                        label: "Blue",
+                                        color: "#0052CC",
+                                        isDisabled: true,
+                                    },
+                                    {
+                                        value: "purple",
+                                        label: "Purple",
+                                        color: "#5243AA",
+                                    },
+                                    {
+                                        value: "red",
+                                        label: "Red",
+                                        color: "#FF5630",
+                                        isFixed: true,
+                                    },
+                                    {
+                                        value: "orange",
+                                        label: "Orange",
+                                        color: "#FF8B00",
+                                    },
+                                    {
+                                        value: "yellow",
+                                        label: "Yellow",
+                                        color: "#FFC400",
+                                    },
+                                    {
+                                        value: "green",
+                                        label: "Green",
+                                        color: "#36B37E",
+                                    },
+                                    {
+                                        value: "forest",
+                                        label: "Forest",
+                                        color: "#00875A",
+                                    },
+                                    {
+                                        value: "slate",
+                                        label: "Slate",
+                                        color: "#253858",
+                                    },
+                                    {
+                                        value: "silver",
+                                        label: "Silver",
+                                        color: "#666666",
+                                    },
+                                ],
+                            },
+                            {
+                                label: "Flavours",
+                                options: [
+                                    {
+                                        value: "vanilla",
+                                        label: "Vanilla",
+                                        rating: "safe",
+                                    },
+                                    {
+                                        value: "chocolate",
+                                        label: "Chocolate",
+                                        rating: "good",
+                                    },
+                                    {
+                                        value: "strawberry",
+                                        label: "Strawberry",
+                                        rating: "wild",
+                                    },
+                                    {
+                                        value: "salted-caramel",
+                                        label: "Salted Caramel",
+                                        rating: "crazy",
+                                    },
+                                ],
+                            },
+                        ]}
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Select
+                        name="multi-select"
+                        defaultValue={{
+                            value: "chocolate",
+                            label: "Chocolate",
+                        }}
+                        options={[
+                            { value: "chocolate", label: "Chocolate" },
+                            { value: "strawberry", label: "Strawberry" },
+                            { value: "vanilla", label: "Vanilla" },
+                        ]}
+                        isMulti
+                    />
+                </div>
+                <div className="col-lg mg-t-10">
+                    <Select
+                        name="disable-select"
+                        defaultValue={{
+                            value: "chocolate",
+                            label: "Chocolate",
+                        }}
+                        options={[
+                            { value: "chocolate", label: "Chocolate" },
+                            { value: "strawberry", label: "Strawberry" },
+                            { value: "vanilla", label: "Vanilla" },
+                        ]}
+                        isMulti
+                        isDisabled
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>

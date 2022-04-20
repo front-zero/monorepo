@@ -1,0 +1,96 @@
+.fc-toolbar .fc-button {
+    border: 0;
+    background-color: #adb5bd;
+    background-image: none;
+    box-shadow: none;
+    color: #fff;
+    border-radius: 0;
+    text-shadow: none;
+    height: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 0;
+}
+.fc-toolbar .fc-today-button {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.fc-toolbar .fc-button:hover,
+.fc-toolbar .fc-button:focus {
+    background-color: #6c757d;
+}
+
+.fc-toolbar .fc-toolbar-title {
+    font-size: 20px;
+    color: #343a40;
+    margin-bottom: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.fc-col-header thead {
+    background-color: #1b84e7;
+}
+.fc-col-header-cell.fc-day {
+    border-color: #3290e9;
+    text-transform: uppercase;
+}
+.fc-col-header-cell.fc-day a {
+    display: block;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+.fc-daygrid-body .fc-daygrid-day a {
+    padding: 4px;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+.fc-daygrid-body .fc-daygrid-day a:hover {
+    text-decoration: none;
+}
+.fc-daygrid-body .fc-event-desc {
+    display: none;
+}
+.fc-daygrid-body .fc-event-main {
+    color: #343a40;
+    padding: 4px;
+}
+.fc-daygrid-body .fc-daygrid-event:focus .fc-event-main {
+    color: #e3e7eb;
+}
+.fc-daygrid-body .fc-h-event .fc-event-time {
+    overflow: visible;
+}
+
+.fc {
+    height: 100%;
+}
+
+.fc-view-harness {
+    height: calc(100% - 50px) !important;
+}
+
+@media screen and (max-width: 480px) {
+    .fc .fc-toolbar {
+        flex-wrap: wrap;
+    }
+    .fc-toolbar-chunk:nth-child(2) {
+        order: 3;
+        flex: 1 0 100%;
+    }
+    .fc-toolbar-chunk:nth-child(2) .fc-toolbar-title {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fc-daygrid-event .fc-event-title,
+    .fc-daygrid-event .fc-event-time {
+        display: none;
+    }
+    .fc-daygrid-event {
+        border: none;
+    }
+}

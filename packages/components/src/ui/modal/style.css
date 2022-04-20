@@ -1,0 +1,25 @@
+.modal .modal-enter {
+    @apply opacity-[0.01];
+}
+.modal .modal-enter .modal-dialog {
+    @apply translate-y-1/2;
+}
+.modal-enter-done {
+    @apply opacity-100 transition-all;
+}
+.modal-enter-done .modal-dialog {
+    @apply translate-y-0;
+}
+.modal-exit {
+    @apply opacity-100;
+}
+.modal-exit .modal-dialog {
+    @apply translate-y-0;
+}
+.modal-exit-active {
+    @apply opacity-[0.01] transition-all;
+}
+
+.modal-exit-active .modal-dialog {
+    @apply translate-y-1/2;
+}

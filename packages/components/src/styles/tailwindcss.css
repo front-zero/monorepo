@@ -1,0 +1,303 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.story-demo > * {
+    margin: 5px;
+}
+.text-inverse {
+    color: #343a40;
+}
+.border-1 {
+    border: 1px solid;
+}
+.border-gray-100 {
+    border-color: #dee2e6;
+}
+.w-24 {
+    width: 6rem;
+}
+.w-36 {
+    width: 9rem;
+}
+.h-80 {
+    height: 20rem;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.ml-10 {
+    margin-left: 2.5rem;
+}
+.mr-10 {
+    margin-right: 2.5rem;
+}
+.mt-5 {
+    margin-top: 1.25rem;
+}
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+.mb-2 {
+    margin-bottom: 10px;
+}
+.mr-3 {
+    margin-right: 0.75rem;
+}
+.ml-3 {
+    margin-left: 0.75rem;
+}
+.mg-t-10 {
+    margin-top: 10px;
+}
+.p-5 {
+    padding: 1.25rem;
+}
+.py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+@media (min-width: 992px) {
+    .mg-lg-t-0 {
+        margin-top: 0px;
+    }
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 1200px) {
+    .col-xl-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .col-md {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .d-md-flex {
+        display: flex;
+    }
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
+.col-xl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#story--ui-dropdown--dropdown-controls,
+#story--ui-dropdown--basic-example,
+#story--ui-dropdown--dropup,
+#story--ui-dropdown--dropleft,
+#story--ui-dropdown--dropright {
+    height: 300px;
+    text-align: center;
+}
+#story--ui-dropdown--dropdown-controls .dropdown,
+#story--ui-dropdown--basic-example .dropdown,
+#story--ui-dropdown--dropup .dropdown,
+#story--ui-dropdown--dropleft .dropdown,
+#story--ui-dropdown--dropright .dropdown {
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 100px !important;
+}
+@media (min-width: 1200px) {
+    .sbdocs-content {
+        max-width: 1140px !important;
+    }
+}
+
+.bg-mantle {
+    background-image: linear-gradient(to right, #514a9d 0%, #24c6dc 100%);
+}
+.bg-dance {
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+}
+.bg-transfile {
+    background-image: linear-gradient(to right, #cb3066 0%, #16bffd 100%);
+}
+#story--forms-select--basic-from-input {
+    height: 300px;
+}
+.spinner-wrap {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.card-activities {
+    padding: 25px;
+}
+.card-activities .timeline-item {
+    padding-top: 20px;
+}
+
+@layer base {
+    body {
+        @apply font-body text-body leading-body text-base font-normal bg-gray-500 text-left;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    p,
+    span {
+        @apply text-body;
+    }
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply font-heading text-heading leading-heading font-medium mb-2;
+    }
+    h1,
+    .h1 {
+        @apply text-h1 mb-10;
+    }
+    h2,
+    .h2 {
+        @apply text-h2;
+    }
+    h3,
+    .h3 {
+        @apply text-h3;
+    }
+    h4,
+    .h4 {
+        @apply text-h4;
+    }
+    h5,
+    .h5 {
+        @apply text-h5;
+    }
+    h6,
+    .h6 {
+        @apply text-h6;
+    }
+    .bg-mantle {
+        background-color: linear-gradient(to right, #514a9d 0%, #24c6dc 100%);
+    }
+    .bg-dance {
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+    }
+    .bg-transfile {
+        background-image: linear-gradient(to right, #cb3066 0%, #16bffd 100%);
+    }
+}
+
+@layer utilities {
+    .cube {
+        transform: rotateZ(45deg);
+    }
+    .cube2 {
+        transform: scale(1.1) rotateZ(90deg);
+    }
+    .cube4 {
+        transform: scale(1.1) rotateZ(270deg);
+    }
+    .cube3 {
+        transform: scale(1.1) rotateZ(180deg);
+    }
+}

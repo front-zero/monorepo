@@ -1,0 +1,823 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import EChart from "./echart";
+
+<Meta title="Charts/E-Charts Charts" />
+
+# E-Charts Charts
+
+<p class="sbdocs-desc">
+    Beautiful and expressive sparklines component for React
+</p>
+
+## Bar Chart
+
+Below is the basic bar chart example.
+
+<Preview withToolbar>
+    <Story name="Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: ["2006", "2008", "2010", "2012", "2014"],
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "bar",
+                                    data: [20, 20, 36, 12, 15],
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "bar",
+                                    data: [8, 5, 25, 10, 10],
+                                },
+                            ],
+                            color: ["#D53A35", "#334B5C"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: ["2006", "2008", "2010", "2012", "2014"],
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "bar",
+                                    data: [20, 20, 36, 12, 15],
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "bar",
+                                    data: [8, 5, 25, 10, 10],
+                                },
+                                {
+                                    name: "Grapes",
+                                    type: "bar",
+                                    data: [15, 10, 20, 20, 25],
+                                },
+                            ],
+                            color: ["#693391", "#E7016E", "#109EDC"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Horizontal Bar Chart
+
+Below is the basic horizontal bar chart example.
+
+<Preview withToolbar>
+    <Story name="Horizontal Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "32",
+                            },
+                            xAxis: {
+                                type: "value",
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                type: "category",
+                                data: ["2006", "2008", "2010", "2012", "2014"],
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "bar",
+                                    data: [20, 20, 36, 12, 15],
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "bar",
+                                    data: [8, 5, 25, 10, 10],
+                                },
+                            ],
+                            color: ["#D53A35", "#334B5C"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "32",
+                            },
+                            xAxis: {
+                                type: "value",
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                type: "category",
+                                data: ["2006", "2008", "2010", "2012", "2014"],
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "bar",
+                                    data: [20, 20, 36, 12, 15],
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "bar",
+                                    data: [8, 5, 25, 10, 10],
+                                },
+                                {
+                                    name: "Grapes",
+                                    type: "bar",
+                                    data: [15, 10, 20, 20, 25],
+                                },
+                            ],
+                            color: ["#693391", "#E7016E", "#109EDC"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Stacked Bar Chart
+
+Below are stacked bar chart example for both horizontal and vertical bar.
+
+<Preview withToolbar>
+    <Story name="Stacked Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: ["2006", "2008", "2010", "2012", "2014"],
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "bar",
+                                    stack: "Stack",
+                                    data: [20, 20, 36, 12, 15],
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "bar",
+                                    stack: "Stack",
+                                    data: [8, 5, 25, 10, 10],
+                                },
+                                {
+                                    name: "Grapes",
+                                    type: "bar",
+                                    stack: "Stack",
+                                    data: [15, 10, 20, 20, 25],
+                                },
+                            ],
+                            color: ["#D53A35", "#334B5C", "#6AB0B8"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                type: "value",
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                type: "category",
+                                data: ["2006", "2008", "2010", "2012", "2014"],
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "bar",
+                                    stack: "Stack",
+                                    data: [20, 20, 36, 12, 15],
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "bar",
+                                    stack: "Stack",
+                                    data: [8, 5, 25, 10, 10],
+                                },
+                                {
+                                    name: "Grapes",
+                                    type: "bar",
+                                    stack: "Stack",
+                                    data: [15, 10, 20, 20, 25],
+                                },
+                            ],
+                            color: ["#D53A35", "#334B5C", "#6AB0B8"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Line Chart
+
+Below are line chart examples.
+
+<Preview withToolbar>
+    <Story name="Line Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: [
+                                    "2006",
+                                    "2008",
+                                    "2010",
+                                    "2012",
+                                    "2014",
+                                    "2015",
+                                    "2016",
+                                    "2017",
+                                ],
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "line",
+                                    data: [20, 20, 36, 18, 15, 20, 25, 20],
+                                },
+                            ],
+                            color: ["#D53A35"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "0",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: [
+                                    "2006",
+                                    "2008",
+                                    "2010",
+                                    "2012",
+                                    "2014",
+                                    "2015",
+                                    "2016",
+                                    "2017",
+                                ],
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: {
+                                        color: "#ddd",
+                                    },
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: "#ccc",
+                                    },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "line",
+                                    smooth: true,
+                                    data: [20, 20, 36, 18, 15, 20, 25, 20],
+                                },
+                            ],
+                            color: ["#693391"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Area Chart
+
+Below are Area Chart examples.
+
+<Preview withToolbar>
+    <Story name="Area Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "12",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: [
+                                    "2006",
+                                    "2008",
+                                    "2010",
+                                    "2012",
+                                    "2014",
+                                    "2016",
+                                ],
+                                boundaryGap: false,
+                                axisLine: {
+                                    lineStyle: { color: "#ccc" },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: { color: "#ddd" },
+                                },
+                                axisLine: {
+                                    lineStyle: { color: "#ccc" },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "line",
+                                    data: [20, 20, 36, 12, 15, 25],
+                                    lineStyle: {
+                                        normal: { width: 1 },
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            areaStyle: { type: "default" },
+                                        },
+                                    },
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "line",
+                                    data: [8, 5, 25, 10, 10, 20],
+                                    lineStyle: {
+                                        normal: { width: 1 },
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            areaStyle: { type: "default" },
+                                        },
+                                    },
+                                },
+                            ],
+                            color: ["#D4716E", "#60525C"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            grid: {
+                                top: "6",
+                                right: "12",
+                                bottom: "17",
+                                left: "25",
+                            },
+                            xAxis: {
+                                data: [
+                                    "2006",
+                                    "2008",
+                                    "2010",
+                                    "2012",
+                                    "2014",
+                                    "2016",
+                                ],
+                                boundaryGap: false,
+                                axisLine: {
+                                    lineStyle: { color: "#ccc" },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            yAxis: {
+                                splitLine: {
+                                    lineStyle: { color: "#ddd" },
+                                },
+                                axisLine: {
+                                    lineStyle: { color: "#ccc" },
+                                },
+                                axisLabel: {
+                                    fontSize: 10,
+                                    color: "#666",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Oranges",
+                                    type: "line",
+                                    smooth: true,
+                                    data: [20, 20, 36, 12, 15, 25],
+                                    lineStyle: {
+                                        normal: { width: 1 },
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            areaStyle: { type: "default" },
+                                        },
+                                    },
+                                },
+                                {
+                                    name: "Apples",
+                                    type: "line",
+                                    smooth: true,
+                                    data: [8, 5, 25, 10, 10, 20],
+                                    lineStyle: {
+                                        normal: { width: 1 },
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            areaStyle: { type: "default" },
+                                        },
+                                    },
+                                },
+                            ],
+                            color: ["#693391", "#E7016E"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Pie Chart
+
+Below are Pie Chart examples.
+
+<Preview withToolbar>
+    <Story name="Pie Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            tooltip: {
+                                trigger: "item",
+                                formatter: "{a} <br/>{b}: {c} ({d}%)",
+                                textStyle: {
+                                    fontSize: 11,
+                                    fontFamily: "Roboto, sans-serif",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Fruits",
+                                    type: "pie",
+                                    radius: "80%",
+                                    center: ["50%", "57.5%"],
+                                    data: [
+                                        { value: 335, name: "Apple" },
+                                        { value: 310, name: "Orange" },
+                                        { value: 234, name: "Grapes" },
+                                        { value: 135, name: "Lemon" },
+                                        { value: 154, name: "Banana" },
+                                    ],
+                                    label: {
+                                        normal: {
+                                            fontFamily: "Roboto, sans-serif",
+                                            fontSize: 11,
+                                        },
+                                    },
+                                    labelLine: {
+                                        normal: {
+                                            show: false,
+                                        },
+                                    },
+                                    markLine: {
+                                        lineStyle: {
+                                            normal: {
+                                                width: 1,
+                                            },
+                                        },
+                                    },
+                                },
+                            ],
+                            color: [
+                                "#D53A35",
+                                "#334B5C",
+                                "#6AB0B8",
+                                "#E98F6F",
+                                "#9FDABF",
+                            ],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <EChart
+                        option={{
+                            tooltip: {
+                                trigger: "item",
+                                formatter: "{a} <br/>{b}: {c} ({d}%)",
+                                textStyle: {
+                                    fontSize: 11,
+                                    fontFamily: "Roboto, sans-serif",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Fruits",
+                                    type: "pie",
+                                    radius: ["40%", "80%"],
+                                    center: ["50%", "57.5%"],
+                                    data: [
+                                        { value: 335, name: "Apple" },
+                                        { value: 310, name: "Orange" },
+                                        { value: 234, name: "Grapes" },
+                                        { value: 135, name: "Lemon" },
+                                        { value: 154, name: "Banana" },
+                                    ],
+                                    label: {
+                                        normal: {
+                                            fontFamily: "Roboto, sans-serif",
+                                            fontSize: 11,
+                                        },
+                                    },
+                                    labelLine: {
+                                        normal: {
+                                            show: false,
+                                        },
+                                    },
+                                    markLine: {
+                                        lineStyle: {
+                                            normal: {
+                                                width: 1,
+                                            },
+                                        },
+                                    },
+                                },
+                            ],
+                            color: [
+                                "#D53A35",
+                                "#334B5C",
+                                "#6AB0B8",
+                                "#E98F6F",
+                                "#9FDABF",
+                            ],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>

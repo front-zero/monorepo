@@ -1,0 +1,25 @@
+{
+    "name": "@ht/shared",
+    "version": "1.0.0",
+    "main": "index.js",
+    "types": "dist/index.d.ts",
+    "author": "Hasan Mobarak",
+    "license": "MIT",
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "clean": "rimraf build *.tsbuildinfo node_modules dist",
+        "typecheck": "tsc -p tsconfig.json",
+        "lint": "eslint --ignore-path .eslintignore . --ext ts --ext tsx --ext js --ext jsx",
+        "lint:fix": "yarn typecheck & yarn format & yarn lint --fix",
+        "type-build": "tsc -b",
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@types/uuid": "^8.3.4"
+    },
+    "peerDependencies": {
+        "dayjs": "^1.11.0",
+        "react": "^17.0.2",
+        "uuid": "^8.3.2"
+    }
+}

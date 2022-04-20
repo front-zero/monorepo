@@ -1,0 +1,162 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+
+import Progress from "./progress";
+
+<Meta title="UI/Progress" component={Progress} />
+
+# Overview
+
+<p class="sbdocs-desc">
+    Documentation and examples for using custom progress bars featuring support
+    for stacked bars, animated backgrounds, and text labels.
+</p>
+
+<Canvas>
+    <Story
+        name="Progress Controls"
+        argTypes={{
+            min: {
+                control: {
+                    type: `number`,
+                },
+            },
+            max: {
+                control: {
+                    type: `number`,
+                },
+            },
+            now: {
+                control: {
+                    type: `number`,
+                },
+            },
+            isLabel: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            color: {
+                control: {
+                    type: `select`,
+                    options: [
+                        "primary",
+                        "success",
+                        "danger",
+                        "warning",
+                        "info",
+                        "indigo",
+                        "purple",
+                        "orange",
+                        "pink",
+                    ],
+                },
+            },
+            size: {
+                control: {
+                    type: `select`,
+                    options: ["xxs", "xs", "sm", "md", "lg"],
+                },
+            },
+            striped: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            className: {
+                control: {
+                    type: `text`,
+                },
+            },
+        }}
+        args={{
+            min: 0,
+            max: 100,
+            now: 40,
+            color: `primary`,
+            size: `md`,
+        }}
+    >
+        {(args) => {
+            return <Progress {...args} />;
+        }}
+    </Story>
+</Canvas>
+
+<ArgsTable of={Progress} story="Progress Controls" />
+
+## Basic Progress
+
+A basic progress in all different colors.
+
+<Preview withToolbar>
+    <Story name="Basic Progress">
+        <Progress now={25} className="mb-5" />
+        <Progress now={35} color="success" className="mb-5" />
+        <Progress now={50} color="warning" className="mb-5" />
+        <Progress now={65} color="danger" className="mb-5" />
+        <Progress now={80} color="indigo" className="mb-5" />
+    </Story>
+</Preview>
+
+## Striped Progress
+
+A striped progress in all different colors.
+
+<Preview withToolbar>
+    <Story name="Striped Progress">
+        <Progress now={25} striped className="mb-5" />
+        <Progress now={35} color="success" striped className="mb-5" />
+        <Progress now={50} color="warning" striped className="mb-5" />
+        <Progress now={65} color="danger" striped className="mb-5" />
+        <Progress now={80} color="info" striped className="mb-5" />
+    </Story>
+</Preview>
+
+## Progress Sizes
+
+A basic progress in different sizes.
+
+<Preview withToolbar>
+    <Story name="Progress Sizes">
+        <h6 className="mb-5">SIZE SUPER EXTRA SMALL</h6>
+        <Progress now={25} size="xxs" className="mb-2" />
+        <Progress now={35} size="xxs" color="success" className="mb-2" />
+        <Progress now={50} size="xxs" color="danger" className="mb-2" />
+        <h6 className="mb-5 mt-5">SIZE EXTRA SMALL</h6>
+        <Progress now={25} size="xs" className="mb-2" />
+        <Progress now={35} size="xs" color="success" className="mb-2" />
+        <Progress now={50} size="xs" color="danger" className="mb-2" />
+        <h6 className="mb-5 mt-5">SIZE SMALL</h6>
+        <Progress now={25} size="sm" className="mb-2" />
+        <Progress now={35} size="sm" color="success" className="mb-2" />
+        <Progress now={50} size="sm" color="danger" className="mb-2" />
+        <h6 className="mb-5 mt-5">SIZE NORMAL</h6>
+        <Progress now={25} size="md" className="mb-2" />
+        <Progress now={35} size="md" color="success" className="mb-2" />
+        <Progress now={50} size="md" color="danger" className="mb-2" />
+        <h6 className="mb-5 mt-5">SIZE LARGE</h6>
+        <Progress now={25} size="lg" className="mb-2" />
+        <Progress now={35} size="lg" color="success" className="mb-2" />
+        <Progress now={50} size="lg" color="danger" className="mb-2" />
+    </Story>
+</Preview>
+
+## Progress Label
+
+A basic progress with labels centered.
+
+<Preview withToolbar>
+    <Story name="Progress Label">
+        <Progress now={25} isLabel className="mb-5" />
+        <Progress now={35} color="success" isLabel className="mb-5" />
+        <Progress now={50} color="warning" isLabel className="mb-5" />
+        <Progress now={65} color="danger" isLabel className="mb-5" />
+        <Progress now={80} color="info" isLabel className="mb-5" />
+    </Story>
+</Preview>

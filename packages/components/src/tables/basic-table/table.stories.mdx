@@ -1,0 +1,800 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import BasicTable from "./table";
+
+<Meta title="Tables/Basic Tables" component={BasicTable} />
+
+# Basic Tables
+
+<p className="sbdocs-desc">
+    Documentation and examples for opt-in styling of tables
+</p>
+
+## Basic Table
+
+Using the most basic table markup.
+
+<Canvas>
+    <Story
+        name="Table Controls"
+        argTypes={{
+            striped: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            bordered: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            hover: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            color: {
+                control: {
+                    type: `select`,
+                    options: [
+                        "primary",
+                        "secondary",
+                        "success",
+                        "danger",
+                        "warning",
+                        "info",
+                        "teal",
+                        "indigo",
+                        "purple",
+                        "pink",
+                        "orange",
+                    ],
+                },
+            },
+            theadColor: {
+                control: {
+                    type: `select`,
+                    options: [
+                        "primary",
+                        "secondary",
+                        "success",
+                        "danger",
+                        "warning",
+                        "info",
+                        "teal",
+                        "indigo",
+                        "purple",
+                        "pink",
+                        "orange",
+                    ],
+                },
+            },
+            className: {
+                control: {
+                    type: `text`,
+                },
+            },
+        }}
+    >
+        {(args) => (
+            <BasicTable {...args}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>$162,700</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+        )}
+    </Story>
+</Canvas>
+
+<ArgsTable of={BasicTable} story="Table Controls" />
+
+## Striped Rows
+
+Add zebra-striping to any table row.
+
+<Preview withToolbar>
+    <Story name="Striped Rows">
+        <BasicTable striped>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>$162,700</td>
+                </tr>
+            </tbody>
+        </BasicTable>
+    </Story>
+</Preview>
+
+## Bordered Table
+
+Add borders on all sides of the table and cells.
+
+<Preview withToolbar>
+    <Story name="Bordered Table">
+        <BasicTable bordered>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>$162,700</td>
+                </tr>
+            </tbody>
+        </BasicTable>
+    </Story>
+</Preview>
+
+## Hoverable Rows
+
+Add borders on all sides of the table and cells.
+
+<Preview withToolbar>
+    <Story name="Hoverable Rows">
+        <BasicTable hover>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>$162,700</td>
+                </tr>
+            </tbody>
+        </BasicTable>
+    </Story>
+</Preview>
+
+## Colored Header Variations
+
+Add borders on all sides of the table and cells.
+
+<Preview withToolbar>
+    <Story name="Colored Header Variations">
+        <div>
+            <BasicTable className="mb-5" bordered theadColor="primary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="secondary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="success">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="danger">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="warning">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="info">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="teal">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="indigo">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="purple">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="pink">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered theadColor="orange">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+            </BasicTable>
+        </div>
+    </Story>
+</Preview>
+
+## Full Color Variations
+
+A custom full color variations for the entire table.
+
+<Preview withToolbar>
+    <Story name="Full Color Variations">
+        <div>
+            <BasicTable className="mb-5" bordered color="primary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>$162,700</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="secondary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>$162,700</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="success">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>$162,700</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="warning">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>$162,700</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="danger">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="info">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="teal">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="indigo">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="purple">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="pink">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+            <BasicTable className="mb-5" bordered color="orange">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                </tbody>
+            </BasicTable>
+        </div>
+    </Story>
+</Preview>

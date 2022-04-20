@@ -1,0 +1,392 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+
+import Card from "./card";
+import CardBody from "./card-body";
+import CardImageOverlay from "./card-image-overlay";
+import CardHeader from "./card-header";
+import CardFooter from "./card-footer";
+
+import image1 from "@ht/shared/images/img18.jpg";
+import image2 from "@ht/shared/images/img19.jpg";
+import image3 from "@ht/shared/images/img21.jpg";
+import image4 from "@ht/shared/images/img22.jpg";
+import image5 from "@ht/shared/images/img23.jpg";
+
+<Meta title="UI/Cards" component={Card} />
+
+# Overview
+
+A flexible and extensible content container with multiple variants and options
+
+## Card Body
+
+An example some text within a card body.
+
+<Preview withToolbar>
+    <Story name="Card Body">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody className="bg-primary text-white">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody className="bg-indigo text-white">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Card Titles, Text and Links
+
+An example of using card title. In the same way, links are added and placed next to each other by adding link tag.
+
+<Preview withToolbar>
+    <Story name="Card Titles, Text and Links">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        <h5>The Card Title</h5>
+                        <p>This is the card subtitle</p>
+                        <p>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="text-primary ">
+                            Card link
+                        </a>
+                        <a href="#" className="text-primary ml-3">
+                            Another link
+                        </a>
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody className="bg-primary">
+                        <h5 className="text-white">The Card Title</h5>
+                        <p className="text-white">This is the card subtitle</p>
+                        <p className="text-white">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="text-white">
+                            Card link
+                        </a>
+                        <a href="#" className="text-white ml-3">
+                            Another link
+                        </a>
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody className="bg-indigo text-white">
+                        <h5 className="text-white">The Card Title</h5>
+                        <p className="text-white">This is the card subtitle</p>
+                        <p className="text-white">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="text-white">
+                            Card link
+                        </a>
+                        <a href="#" className="text-white ml-3">
+                            Another link
+                        </a>
+                    </CardBody>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Top Image Card
+
+Places an image to the top, bottom or overlay of the card.
+
+<Preview withToolbar>
+    <Story name="Top Image Card">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <img src={image1} alt="card" />
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <img src={image2} alt="card" />
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Bottom Image Card
+
+Places an image to the top, bottom or overlay of the card.
+
+<Preview withToolbar>
+    <Story name="Bottom Image Card">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                    <img src={image1} alt="card" />
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                    <img src={image2} alt="card" />
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Image Content Overlay
+
+Turn an image into a card background and overlay your card’s text.
+
+<Preview withToolbar>
+    <Story name="Image Content Overlay">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <img src={image3} alt="card" />
+                    <CardImageOverlay>
+                        <h5 class="text-white">The Cat Prisoner</h5>
+                        <p class="text-white">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content. Lorem
+                            ipsum dolor sit amet consictetur...
+                        </p>
+                        <a href="#" className="text-white">
+                            Read More
+                        </a>
+                    </CardImageOverlay>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <img src={image4} alt="card" />
+                    <CardImageOverlay>
+                        <h5 class="text-white">The Ghost Town</h5>
+                        <p class="text-white">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content. Lorem
+                            ipsum dolor sit amet consictetur...
+                        </p>
+                        <a href="#" className="text-white">
+                            Read More
+                        </a>
+                    </CardImageOverlay>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <img src={image5} alt="card" />
+                    <CardImageOverlay>
+                        <h5 class="text-white">TThe Green Leaves</h5>
+                        <p class="text-white">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content. Lorem
+                            ipsum dolor sit amet consictetur...
+                        </p>
+                        <a href="#" className="text-white">
+                            Read More
+                        </a>
+                    </CardImageOverlay>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Colored Card Header
+
+Add an optional color header within a card.
+
+<Preview withToolbar>
+    <Story name="Colored Card Header">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <CardHeader className="bg-primary">
+                        <h5 className="text-white mb-0">Description</h5>
+                    </CardHeader>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardHeader className="bg-danger">
+                        <h5 className="text-white mb-0">Description</h5>
+                    </CardHeader>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardHeader className="bg-indigo">
+                        <h5 className="text-white mb-0">Description</h5>
+                    </CardHeader>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Gradient Color Card Header
+
+Add an optional gradient color header within a card.
+
+<Preview withToolbar>
+    <Story name="Gradient Color Card Header">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <CardHeader className="bg-mantle">
+                        <h5 className="text-white mb-0">Description</h5>
+                    </CardHeader>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardHeader className="bg-dance">
+                        <h5 className="text-white mb-0">Description</h5>
+                    </CardHeader>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardHeader className="bg-transfile">
+                        <h5 className="text-white mb-0">Description</h5>
+                    </CardHeader>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Card with Footer
+
+Add an optional footer within a card.
+
+<Preview withToolbar>
+    <Story name="Card with Footer">
+        <div className="row">
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                    <CardFooter>January, 20, 2017 4:30am</CardFooter>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                    <CardFooter className="text-center">
+                        <a href="#!" className="text-primary">
+                            Read More
+                        </a>
+                    </CardFooter>
+                </Card>
+            </div>
+            <div className="col-md">
+                <Card>
+                    <CardBody>
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content. Lorem ipsum
+                        dolor sit amet consictetur...
+                    </CardBody>
+                    <CardFooter className="text-right">
+                        share
+                        <i className="fa fa-facebook mr-3 ml-3" />
+                        <i className="fa fa-twitter" />
+                    </CardFooter>
+                </Card>
+            </div>
+        </div>
+    </Story>
+</Preview>

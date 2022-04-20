@@ -1,0 +1,128 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import SparkLineChart from "./line-chart";
+import SparkBarChart from "./bar-chart";
+
+<Meta title="Charts/Sparkline Charts" />
+
+# Sparkline Charts
+
+<p class="sbdocs-desc">
+    Beautiful and expressive sparklines component for React
+</p>
+
+## Line Chart
+
+An example of a simple line chart with one series.
+
+<Preview withToolbar>
+    <Story name="Line Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <SparkLineChart
+                        data={[1, 4, 4, 7, 5, 9, 10, 1, 4, 4, 7, 5, 9, 10]}
+                        width={200}
+                        height={70}
+                        color="#0083CD"
+                        lineStyle={{ fill: "none" }}
+                        hasSpot={true}
+                        spotStyle={{ fill: "#0083CD" }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <SparkLineChart
+                        data={[1, 4, 4, 7, 5, 9, 10, 1, 4, 4, 7, 5, 9, 10]}
+                        width={200}
+                        height={70}
+                        color="#B654C3"
+                        lineStyle={{ fill: "none" }}
+                        hasSpot={true}
+                        spotStyle={{ fill: "#B654C3" }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Area Chart
+
+An example of a simple Area Chart with one series.
+
+<Preview withToolbar>
+    <Story name="Area Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <SparkLineChart
+                        data={[1, 4, 4, 7, 5, 9, 10, 1, 4, 4, 7, 5, 9, 10]}
+                        width={200}
+                        height={70}
+                        color="#0083CD"
+                        lineStyle={{
+                            color: "rgba(0,131,205,0.2)",
+                        }}
+                        hasSpot={true}
+                        spotStyle={{ fill: "#0083CD" }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <SparkLineChart
+                        data={[1, 4, 4, 7, 5, 9, 10, 1, 4, 4, 7, 5, 9, 10]}
+                        width={200}
+                        height={70}
+                        color="#B654C3"
+                        lineStyle={{
+                            color: "rgba(182,84,195,0.2)",
+                        }}
+                        hasSpot={false}
+                        spotStyle={{ fill: "#B654C3" }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Bar Chart
+
+An example of a simple Bar Chart with one series.
+
+<Preview withToolbar>
+    <Story name="Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <SparkBarChart
+                        data={[3, 4, 4, 7, 5, 9, 10, 6, 4, 4, 7, 5, 9, 10]}
+                        width={153}
+                        height={70}
+                        barStyle={{ fill: "#0083CD" }}
+                        barWidth={10}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <SparkBarChart
+                        data={[3, 4, 4, 7, 5, 9, 10, 6, 4, 4, 7, 5, 9, 10]}
+                        width={153}
+                        height={70}
+                        barStyle={{ fill: "#B654C3" }}
+                        barWidth={10}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>

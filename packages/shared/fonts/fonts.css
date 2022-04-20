@@ -1,0 +1,147 @@
+/* roboto-300 - latin */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local(""),
+        /* IE6-IE8 */ url("./roboto/roboto-v29-latin-300.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("./roboto/roboto-v29-latin-300.woff")
+            format("woff");
+}
+/* roboto-regular - latin */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(""),
+        /* IE6-IE8 */ url("./roboto/roboto-v29-latin-regular.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("./roboto/roboto-v29-latin-regular.woff") format("woff");
+}
+/* roboto-500 - latin */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(""),
+        /* IE6-IE8 */ url("./roboto/roboto-v29-latin-500.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("./roboto/roboto-v29-latin-500.woff")
+            format("woff");
+}
+/* roboto-700 - latin */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(""),
+        /* IE6-IE8 */ url("./roboto/roboto-v29-latin-700.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("./roboto/roboto-v29-latin-700.woff")
+            format("woff");
+}
+
+/* open-sans-regular - latin */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./open-sans/open-sans-v27-latin-regular.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./open-sans/open-sans-v27-latin-regular.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("./open-sans/open-sans-v27-latin-regular.woff") format("woff"); /* Legacy iOS */
+}
+/* open-sans-500 - latin */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./open-sans/open-sans-v27-latin-500.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./open-sans/open-sans-v27-latin-500.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("./open-sans/open-sans-v27-latin-500.woff") format("woff"); /* Legacy iOS */
+}
+/* open-sans-600 - latin */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./open-sans/open-sans-v27-latin-600.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./open-sans/open-sans-v27-latin-600.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("./open-sans/open-sans-v27-latin-600.woff") format("woff"); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./open-sans/open-sans-v27-latin-700.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./open-sans/open-sans-v27-latin-700.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("./open-sans/open-sans-v27-latin-700.woff") format("woff"); /* Legacy iOS */
+}
+/* open-sans-800 - latin */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    font-display: swap;
+    src: url("./open-sans/open-sans-v27-latin-800.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./open-sans/open-sans-v27-latin-800.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("./open-sans/open-sans-v27-latin-800.woff") format("woff"); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./lato/lato-v22-latin-300.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./lato/lato-v22-latin-300.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("./lato/lato-v22-latin-300.woff")
+            format("woff"); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./lato/lato-v22-latin-regular.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./lato/lato-v22-latin-regular.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("./lato/lato-v22-latin-regular.woff")
+            format("woff"); /* Legacy iOS */
+}
+/* lato-700 - latin */
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./lato/lato-v22-latin-700.woff2"); /* IE9 Compat Modes */
+    src: local(""),
+        /* IE6-IE8 */ url("./lato/lato-v22-latin-700.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("./lato/lato-v22-latin-700.woff")
+            format("woff"); /* Legacy iOS */
+}

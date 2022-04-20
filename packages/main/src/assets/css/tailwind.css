@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-body text-body leading-body text-base font-normal bg-gray-500;
+    }
+    a {
+        @apply text-primary;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply font-heading text-heading leading-heading font-medium mb-2;
+    }
+    h1,
+    .h1 {
+        @apply text-h1;
+    }
+    h2,
+    .h2 {
+        @apply text-h2;
+    }
+    h3,
+    .h3 {
+        @apply text-h3;
+    }
+    h4,
+    .h4 {
+        @apply text-h4;
+    }
+    h5,
+    .h5 {
+        @apply text-h5;
+    }
+    h6,
+    .h6 {
+        @apply text-h6;
+    }
+    .submenu {
+        @apply hidden;
+    }
+    .submenu.open {
+        @apply block;
+    }
+    hr {
+        @apply my-4 border-0 border-t border-t-black/10;
+    }
+    .nav {
+        @apply flex flex-wrap pl-0 mb-0 list-none;
+    }
+    th {
+        @apply text-left;
+    }
+    label {
+        @apply mb-2 inline-block;
+    }
+    .contact-card .fa-facebook {
+        @apply text-facebook;
+    }
+    .contact-card .fa-twitter {
+        @apply text-twitter;
+    }
+    .contact-card .fa-google {
+        @apply text-gplus;
+    }
+    .main-content {
+        @apply transition-all min-h-[calc(100vh_-_199px)] md:min-h-[calc(100vh_-_263px)];
+    }
+    .orphans-1 {
+        orphans: 1;
+    }
+    .widows-1 {
+        widows: 1;
+    }
+    .social-own-color [class*="facebook"] {
+        @apply text-facebook;
+    }
+    .social-own-color [class*="twitter"] {
+        @apply text-twitter;
+    }
+    .social-own-color [class*="google"] {
+        @apply text-gplus;
+    }
+    .social-own-color [class*="pinterest"] {
+        @apply text-pinterest;
+    }
+    .social-own-color [class*="github"] {
+        @apply text-github;
+    }
+    .social-own-color [class*="instagram"] {
+        @apply text-instagram;
+    }
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+}
+
+@layer utilities {
+    .cube {
+        transform: rotateZ(45deg);
+    }
+    .cube2 {
+        transform: scale(1.1) rotateZ(90deg);
+    }
+    .cube4 {
+        transform: scale(1.1) rotateZ(270deg);
+    }
+    .cube3 {
+        transform: scale(1.1) rotateZ(180deg);
+    }
+}

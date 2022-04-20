@@ -1,0 +1,78 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import Card from "../card/card";
+import CardTitle from "../card/card-title";
+
+import Timeline01 from "./layout-01/timeline";
+import Timeline01Item from "./layout-01/timeline-item";
+import Timeline01Media from "./layout-01/timeline-media";
+import Timeline01Body from "./layout-01/timeline-body";
+
+import Timeline02 from "./layout-02/timeline";
+import Timeline02Item from "./layout-02/timeline-item";
+import Timeline02Time from "./layout-02/timeline-time";
+import Timeline02Date from "./layout-02/timeline-date";
+import Timeline02Body from "./layout-02/timeline-body";
+
+<Meta title="UI/Timeline" />
+
+# Timeline
+
+<p class="sbdocs-desc">We have 3 timline components</p>
+
+## Timeline 01
+
+<Preview withToolbar>
+    <Story name="Timeline 01">
+        <Card className="card-activities">
+            <CardTitle>Recent Activities</CardTitle>
+            <p>Last activity was 2 hours ago</p>
+            <Timeline01>
+                <Timeline01Item>
+                    <Timeline01Media className="bg-primary">
+                        <i className="fa fa-star" />
+                    </Timeline01Media>
+                    <Timeline01Body>
+                        <h6>Report has been updated</h6>
+                        <p className="text-sm mb-[5px] leading-[1.16]">
+                            Aenean vulputate eleifend tellus. Aenean leo ligula,
+                            porttitor.
+                        </p>
+                        <span className="block text-xs">2 hours ago</span>
+                    </Timeline01Body>
+                </Timeline01Item>
+                <Timeline01Item>
+                    <Timeline01Media className="bg-success">
+                        <i className="fa fa-trophy" />
+                    </Timeline01Media>
+                    <Timeline01Body>
+                        <h6>Achievement Unlocked</h6>
+                        <p className="text-sm mb-[5px] leading-[1.16]">
+                            Aenean vulputate eleifend tellus. Aenean leo ligula,
+                            porttitor.
+                        </p>
+                        <span className="block text-xs">2 hours ago</span>
+                    </Timeline01Body>
+                </Timeline01Item>
+                <Timeline01Item>
+                    <Timeline01Media className="bg-purple">
+                        <i className="fa fa-file-image-o" />
+                    </Timeline01Media>
+                    <Timeline01Body>
+                        <h6>Added new images</h6>
+                        <p className="text-sm mb-[5px] leading-[1.16]">
+                            Aenean vulputate eleifend tellus. Aenean leo ligula,
+                            porttitor.
+                        </p>
+                        <span className="block text-xs">2 hours ago</span>
+                    </Timeline01Body>
+                </Timeline01Item>
+            </Timeline01>
+        </Card>
+    </Story>
+</Preview>

@@ -1,0 +1,426 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import ChartistLineChart from "./line-chart";
+import ChartistBarChart from "./bar-chart";
+import ChartistPieChart from "./pie-chart";
+
+<Meta title="Charts/Chartist Charts" />
+
+# CHARTIST.JS
+
+<p class="sbdocs-desc">
+    react-chartist is a wrapper component for Chartist.js ready to be integrated
+    into your react.js application to create stunning React Charts.
+</p>
+
+## Simple Line Chart
+
+An example of a simple line chart with three series.
+
+<Preview withToolbar>
+    <Story name="Simple Line Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistLineChart
+                        data={{
+                            labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+                            series: [[12, 9, 7, 8, 5]],
+                        }}
+                        options={{
+                            high: 30,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                            },
+                        }}
+                        line={{
+                            width: "1px",
+                            colors: ["#ED1E79"],
+                        }}
+                        point={{
+                            width: "8px",
+                            colors: ["#ED1E79"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistLineChart
+                        data={{
+                            labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+                            series: [
+                                [12, 9, 7, 8, 5],
+                                [2, 1, 5, 7, 3],
+                                [1, 3, 4, 5, 6],
+                            ],
+                        }}
+                        options={{
+                            high: 30,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                            },
+                        }}
+                        line={{
+                            colors: ["#ED1E79", "#93268F", "#818AC3"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Line Area Chart
+
+This chart uses the showArea option to draw line, dots but also an area shape. Use the low option to specify a fixed lower bound that will make the area expand. You can also use the areaBase property to specify a data value that will be used to determine the area shape base position (this is 0 by default).
+
+<Preview withToolbar>
+    <Story name="Line Area Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistLineChart
+                        data={{
+                            labels: [1, 2, 3, 4, 5, 6, 7, 8],
+                            series: [[5, 2, 4, 2, 0, 2, 5, 3]],
+                        }}
+                        options={{
+                            high: 30,
+                            low: 0,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            showArea: true,
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                            },
+                        }}
+                        line={{
+                            width: "1px",
+                            colors: ["#ED1E79"],
+                        }}
+                        point={{
+                            width: "8px",
+                            colors: ["#ED1E79"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistLineChart
+                        data={{
+                            labels: [1, 2, 3, 4, 5, 6, 7, 8],
+                            series: [
+                                [5, 9, 7, 8, 5, 3, 5, 4],
+                                [10, 15, 10, 20, 18, 11, 16, 18],
+                            ],
+                        }}
+                        options={{
+                            high: 30,
+                            low: 0,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            showArea: true,
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                            },
+                        }}
+                        line={{
+                            colors: ["#ED1E79", "#93268F"],
+                        }}
+                        area={{
+                            colors: ["#d70206", "#93268F"],
+                            opacity: [0.2, 0.3],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Bar Chart
+
+A bi-polar bar chart with a range limit set with low and high. There is also an interpolation function used to skip every odd grid line / label.
+
+<Preview withToolbar>
+    <Story name="Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistBarChart
+                        data={{
+                            labels: [1, 2, 3, 4, 5, 6, 7, 8],
+                            series: [[5, 9, 7, 8, 5, 3, 5, 4]],
+                        }}
+                        options={{
+                            high: 30,
+                            low: 0,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            showArea: true,
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                            },
+                        }}
+                        bar={{
+                            colors: ["#ED1E79"],
+                            width: ["11px", "15px", null, "17px"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistBarChart
+                        data={{
+                            labels: [1, 2, 3, 4, 5, 6, 7, 8],
+                            series: [
+                                [5, 9, 7, 8, 5, 3, 5, 4],
+                                [10, 15, 10, 20, 18, 11, 16, 18],
+                            ],
+                        }}
+                        options={{
+                            high: 30,
+                            low: 0,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            showArea: true,
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                            },
+                        }}
+                        bar={{
+                            colors: ["#ED1E79", "#93268F"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Horizontal Bar Chart
+
+Guess what! Creating horizontal bar charts is as simple as it can get. There's no new chart type you need to learn, just passing an additional option is enough.
+
+<Preview withToolbar>
+    <Story name="Horizontal Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistBarChart
+                        data={{
+                            labels: [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday",
+                            ],
+                            series: [[5, 9, 7, 8, 5, 3, 5]],
+                        }}
+                        options={{
+                            high: 30,
+                            low: 0,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            horizontalBars: true,
+                            showArea: true,
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 40,
+                            },
+                        }}
+                        bar={{
+                            colors: ["#ED1E79"],
+                            width: "11px",
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistBarChart
+                        data={{
+                            labels: [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday",
+                            ],
+                            series: [
+                                [5, 9, 7, 8, 5, 3, 5],
+                                [10, 15, 10, 20, 18, 11, 16],
+                            ],
+                        }}
+                        options={{
+                            high: 30,
+                            low: 0,
+                            axisY: {
+                                onlyInteger: true,
+                            },
+                            horizontalBars: true,
+                            showArea: true,
+                            fullWidth: true,
+                            chartPadding: {
+                                bottom: 0,
+                                left: 40,
+                            },
+                        }}
+                        bar={{
+                            colors: ["#ED1E79", "#93268F"],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Stacked Bar Chart
+
+You can also set your bar chart to stack the series bars on top of each other easily by using the stackBars property in your configuration.
+
+<Preview withToolbar>
+    <Story name="Stacked Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistBarChart
+                        data={{
+                            labels: ["Q1", "Q2", "Q3", "Q4"],
+                            series: [
+                                [800000, 1200000, 1400000, 1300000],
+                                [200000, 400000, 500000, 300000],
+                                [100000, 200000, 400000, 600000],
+                            ],
+                        }}
+                        options={{
+                            stackBars: true,
+                            axisY: {
+                                labelInterpolationFnc: function (value) {
+                                    return value / 1000 + "k";
+                                },
+                            },
+                        }}
+                        bar={{
+                            colors: ["#ED1E79", "#93268F", "#818AC3"],
+                            width: "30px",
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistBarChart
+                        data={{
+                            labels: ["Q1", "Q2", "Q3", "Q4"],
+                            series: [
+                                [800000, 1200000, 1400000, 1300000],
+                                [200000, 400000, 500000, 300000],
+                                [100000, 200000, 400000, 600000],
+                            ],
+                        }}
+                        options={{
+                            stackBars: true,
+                            horizontalBars: true,
+                            axisX: {
+                                labelInterpolationFnc: function (value) {
+                                    return value / 1000 + "k";
+                                },
+                            },
+                            chartPadding: {
+                                bottom: 0,
+                                left: 0,
+                                right: 40,
+                            },
+                        }}
+                        bar={{
+                            colors: ["#ED1E79", "#93268F", "#818AC3"],
+                            width: "30px",
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Pie Chart
+
+A very simple pie chart with label interpolation to show percentage instead of the actual data series value.
+
+<Preview withToolbar>
+    <Story name="Pie Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistPieChart
+                        data={{
+                            series: [5, 3, 4],
+                        }}
+                        percentageLabel
+                        slice={{
+                            colors: ["#ED1E79", "#93268F", "#818AC3"],
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="h-80 p-5 border border-geyser">
+                    <ChartistPieChart
+                        data={{
+                            series: [5, 3, 4, 6, 2],
+                        }}
+                        percentageLabel
+                        slice={{
+                            colors: [
+                                "#ED1E79",
+                                "#93268F",
+                                "#818AC3",
+                                "#0082CD",
+                                "#EC7A9C",
+                            ],
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>

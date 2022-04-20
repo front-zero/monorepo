@@ -1,0 +1,616 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import ChartJSBarChart from "./bar-chart";
+import ChartJSHZBarChart from "./horizontal-bar-chart";
+import ChartJSLineChart from "./line-chart";
+import ChartJSPieChart from "./pie-chart";
+import ChartJSDoughnutChart from "./doughnut-chart";
+
+<Meta title="Charts/ChartJS Charts" />
+
+# ChartJS Charts
+
+<p class="sbdocs-desc">
+    Beautiful and expressive sparklines component for React
+</p>
+
+## Bar Chart
+
+Below is the basic bar chart example.
+
+<Preview withToolbar>
+    <Story name="Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: "#27AAC8",
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    ticks: {
+                                        stepSize: 10,
+                                    },
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: [
+                                        "#29B0D0",
+                                        "#2A516E",
+                                        "#F07124",
+                                        "#CBE0E3",
+                                        "#979193",
+                                    ],
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    ticks: {
+                                        stepSize: 10,
+                                    },
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Horizontal Bar Chart
+
+Below is the horizontal bar chart type example.
+
+<Preview withToolbar>
+    <Story name="Horizontal Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSHZBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: "#27AAC8",
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                x: {
+                                    display: true,
+                                    max: 80,
+                                    ticks: {
+                                        stepSize: 10,
+                                    },
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSHZBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: [
+                                        "#29B0D0",
+                                        "#2A516E",
+                                        "#F07124",
+                                        "#CBE0E3",
+                                        "#979193",
+                                    ],
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                x: {
+                                    display: true,
+                                    max: 80,
+                                    ticks: {
+                                        stepSize: 10,
+                                    },
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Stacked Bar Chart
+
+Below is the stacked bar chart type example.
+
+<Preview withToolbar>
+    <Story name="Stacked Bar Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    data: [10, 24, 20, 25, 35, 50],
+                                    backgroundColor: "#29B0D0",
+                                },
+                                {
+                                    data: [10, 24, 20, 25, 35, 50],
+                                    backgroundColor: "#2E5773",
+                                },
+                                {
+                                    data: [20, 30, 28, 33, 45, 65],
+                                    backgroundColor: "#F47322",
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                x: {
+                                    stacked: true,
+                                },
+                                y: {
+                                    stacked: true,
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSHZBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    data: [10, 24, 20, 25, 35, 50],
+                                    backgroundColor: "#29B0D0",
+                                },
+                                {
+                                    data: [10, 24, 20, 25, 35, 50],
+                                    backgroundColor: "#2E5773",
+                                },
+                                {
+                                    data: [20, 30, 28, 33, 45, 65],
+                                    backgroundColor: "#F47322",
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                x: {
+                                    stacked: true,
+                                },
+                                y: {
+                                    stacked: true,
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Line Chart
+
+Below is the line chart type example.
+
+<Preview withToolbar>
+    <Story name="Line Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSLineChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    borderColor: "#27AAC8",
+                                    borderWidth: 1,
+                                    tension: 0.5,
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    min: 0,
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSLineChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    data: [12, 39, 20, 10, 20, 18],
+                                    borderColor: "#2E5773",
+                                    borderWidth: 1,
+                                    tension: 0.5,
+                                },
+                                {
+                                    data: [30, 50, 28, 23, 25, 28],
+                                    borderColor: "#F47322",
+                                    borderWidth: 1,
+                                    tension: 0.5,
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    min: 0,
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Area Chart
+
+Below is the area chart type example.
+
+<Preview withToolbar>
+    <Story name="Area Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSLineChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: "#F07124",
+                                    fill: true,
+                                    borderWidth: 1,
+                                    borderColor: "#fff",
+                                    tension: 0.5,
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    min: 0,
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSLineChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    data: [10, 24, 20, 25, 35, 50],
+                                    backgroundColor: "#2E5773",
+                                    fill: true,
+                                    borderWidth: 0,
+                                    borderColor: "#fff",
+                                    tension: 0.5,
+                                },
+                                {
+                                    data: [20, 30, 28, 33, 45, 65],
+                                    backgroundColor: "#F47322",
+                                    fill: true,
+                                    borderWidth: 0,
+                                    borderColor: "#fff",
+                                    tension: 0.5,
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    min: 0,
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Multi Type Chart
+
+Below is the basic multi type chart example.
+
+<Preview withToolbar>
+    <Story name="Multi Type Chart">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: "#27AAC8",
+                                },
+                                {
+                                    type: "line",
+                                    label: "Dataset 1",
+                                    borderColor: "rgb(255, 99, 132)",
+                                    borderWidth: 2,
+                                    fill: false,
+                                    data: [10, 24, 20, 25, 35, 50],
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    ticks: {
+                                        stepSize: 10,
+                                    },
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSBarChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    type: "line",
+                                    label: "Dataset 1",
+                                    borderColor: "rgb(255, 99, 132)",
+                                    borderWidth: 2,
+                                    fill: false,
+                                    data: [10, 24, 20, 25, 35, 50],
+                                },
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 39, 20, 10, 25, 18],
+                                    backgroundColor: [
+                                        "#29B0D0",
+                                        "#2A516E",
+                                        "#F07124",
+                                        "#CBE0E3",
+                                        "#979193",
+                                    ],
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                            scales: {
+                                y: {
+                                    display: true,
+                                    max: 80,
+                                    ticks: {
+                                        stepSize: 10,
+                                    },
+                                },
+                            },
+                        }}
+                        height={200}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+## Pie And Doughnut Chart
+
+Below is the basic Pie And Doughnut chart example.
+
+<Preview withToolbar>
+    <Story name="Pie And Doughnut">
+        <div className="row">
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSPieChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    backgroundColor: [
+                                        "#29B0D0",
+                                        "#4C6579",
+                                        "#F57E2E",
+                                        "#C8E0E4",
+                                        "#A6A7AC",
+                                    ],
+                                    borderColor: "#fff",
+                                    borderWidth: 2,
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="col-lg">
+                <div className="p-5 border border-geyser">
+                    <ChartJSDoughnutChart
+                        data={{
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                            datasets: [
+                                {
+                                    label: "# of Votes",
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    backgroundColor: [
+                                        "#29B0D0",
+                                        "#4C6579",
+                                        "#F57E2E",
+                                        "#C8E0E4",
+                                        "#A6A7AC",
+                                    ],
+                                    borderColor: "#fff",
+                                    borderWidth: 2,
+                                },
+                            ],
+                        }}
+                        options={{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                            },
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    </Story>
+</Preview>

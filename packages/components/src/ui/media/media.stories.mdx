@@ -1,0 +1,211 @@
+import { Meta, Story, Canvas, Preview } from "@storybook/addon-docs/blocks";
+import Media from "./media";
+import MediaLeft from "./media-left";
+import MediaBody from "./media-body";
+import image from "@ht/shared/images/img0.jpg";
+
+<Meta title="UI/Media" component={Media} />
+
+# Overview
+
+<p class="sbdocs-desc">
+    Construct highly repetitive components like blog comments, tweets, and the
+    like.
+</p>
+
+## Basic Example
+
+Helps build complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. Plus, it does this with only two required classes thanks to flexbox.
+
+<Preview withToolbar>
+    <Story name="Basic Example">
+        <Media>
+            <MediaLeft className="w-36 mr-10">
+                <img src={image} alt="media image" />
+            </MediaLeft>
+            <MediaBody>
+                <h5 className="text-inverse">Media heading</h5>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+            </MediaBody>
+        </Media>
+    </Story>
+</Preview>
+
+## Nesting
+
+Media objects can be infinitely nested, though we suggest you stop at some point. Place nested `Media` within the `MediaBody` of a parent media object.
+
+<Preview withToolbar>
+    <Story name="Nesting">
+        <Media>
+            <MediaLeft className="w-36 mr-10">
+                <img src={image} alt="media image" />
+            </MediaLeft>
+            <MediaBody>
+                <h5 className="text-inverse">Media heading</h5>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+                <Media className="mt-5">
+                    <MediaLeft className="w-24 mr-10">
+                        <img src={image} alt="media image" />
+                    </MediaLeft>
+                    <MediaBody>
+                        <h5 className="text-inverse">Media heading</h5>
+                        <p>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla
+                            vel metus scelerisque ante sollicitudin. Cras purus
+                            odio, vestibulum in vulputate at, tempus viverra
+                            turpis. Fusce condimentum nunc ac nisi vulputate
+                            fringilla. Donec lacinia congue felis in faucibus.
+                        </p>
+                    </MediaBody>
+                </Media>
+            </MediaBody>
+        </Media>
+    </Story>
+</Preview>
+
+## Alignment
+
+Media in a media object can be aligned with flexbox utilities to the top (default), middle, or end of your `MediaBody` content.
+
+<Preview withToolbar>
+    <Story name="Alignments">
+        <Media>
+            <MediaLeft alignMent="middle" className="w-24 mr-10">
+                <img src={image} alt="media image" />
+            </MediaLeft>
+            <MediaBody>
+                <h5 className="text-inverse">Media heading</h5>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+            </MediaBody>
+        </Media>
+        <hr className="mt-5 mb-5" />
+        <Media>
+            <MediaLeft alignMent="end" className="w-24 mr-10">
+                <img src={image} alt="media image" />
+            </MediaLeft>
+            <MediaBody>
+                <h5 className="text-inverse">Media heading</h5>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+            </MediaBody>
+        </Media>
+    </Story>
+</Preview>
+
+## Order
+
+Change the order of content in media objects by modifying the HTML itself, or by adding some custom flexbox CSS to set the order property (to an integer of your choosing).
+
+<Preview withToolbar>
+    <Story name="Order">
+        <Media>
+            <MediaBody>
+                <h5 className="text-inverse">Media heading</h5>
+                <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                </p>
+            </MediaBody>
+            <MediaLeft className="w-24 ml-10">
+                <img src={image} alt="media image" />
+            </MediaLeft>
+        </Media>
+    </Story>
+</Preview>
+
+## Media List
+
+Because the media object has so few structural requirements, you can also use these classes on list HTML elements.
+
+<Preview withToolbar>
+    <Story name="Media List">
+        <ul>
+            <Media as="li" className="mb-5">
+                <MediaLeft className="w-36 mr-10">
+                    <img src={image} alt="media image" />
+                </MediaLeft>
+                <MediaBody>
+                    <h5 className="text-inverse">Media heading</h5>
+                    <p>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
+                        metus scelerisque ante sollicitudin. Cras purus odio,
+                        vestibulum in vulputate at, tempus viverra turpis. Fusce
+                        condimentum nunc ac nisi vulputate fringilla. Donec
+                        lacinia congue felis in faucibus.
+                    </p>
+                </MediaBody>
+            </Media>
+            <Media as="li" className="mb-5">
+                <MediaLeft className="w-36 mr-10">
+                    <img src={image} alt="media image" />
+                </MediaLeft>
+                <MediaBody>
+                    <h5 className="text-inverse">Media heading</h5>
+                    <p>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
+                        metus scelerisque ante sollicitudin. Cras purus odio,
+                        vestibulum in vulputate at, tempus viverra turpis. Fusce
+                        condimentum nunc ac nisi vulputate fringilla. Donec
+                        lacinia congue felis in faucibus.
+                    </p>
+                </MediaBody>
+            </Media>
+            <Media as="li" className="mb-5">
+                <MediaLeft className="w-36 mr-10">
+                    <img src={image} alt="media image" />
+                </MediaLeft>
+                <MediaBody>
+                    <h5 className="text-inverse">Media heading</h5>
+                    <p>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
+                        metus scelerisque ante sollicitudin. Cras purus odio,
+                        vestibulum in vulputate at, tempus viverra turpis. Fusce
+                        condimentum nunc ac nisi vulputate fringilla. Donec
+                        lacinia congue felis in faucibus.
+                    </p>
+                </MediaBody>
+            </Media>
+        </ul>
+    </Story>
+</Preview>
